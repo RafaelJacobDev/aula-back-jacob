@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- informa ao navegador a versão do html, no caso a 5 -->
+<html lang="pt-BR">
+<!-- informa o idioma da pagina -->
+
+<head>
+    <!-- HEAD tag onde ficam as configurações da pagina - parte não visual -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hello World</title>
+    <!-- Única tag no HEAD que é visível -->
+</head>
+
+<body>
+    <!-- BODY teg onde fica as partes visuais - o conteudo que vemos na pagina -->
+    <div class="container">
+        <h1>Formulário do Torcedor</h1>
+        <form action="./Pags/cadastrarAction.php" method="post">
+            <div class="nome">
+                <label for="fname">Primeiro Nome:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Rodrigo" required><br>
+                <label for="lname">Ultimo nome</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Rodrigues" required><br>
+            </div>
+            <div class="Idade">
+                <label for="idade">Idade:</label><br>
+                <input type="number" min="18" max="99" id="idade" name="idade" placeholder="18" required><br><br>
+            </div>
+            <div class="Celular">
+                <label for="fname">Celular com DDD:</label><br>
+                <input type="text" id="cel" name="cel" minlength="11" maxlength="11"
+                    placeholder="13000000000"><br><br>
+            </div>
+            <div class="time">
+                <label for="coracao">Time do coração:</label><br>
+                <input type="radio" id="Corinthians" name="Time_do_coração" value="Corinthians">
+                <label for="Corinthians">Corinthians</label><br>
+                <input type="radio" id="Palmeiras" name="Time_do_coração" value="Palmeira">
+                <label for="Palmeiras">Palmeiras</label><br>
+                <input type="radio" id="Flamengo" name="Time_do_coração" value="Flamengo">
+                <label for="Flamengo">Flamengo</label><br>
+                <input type="radio" id="Atlético" name="Time_do_coração" value="Atlético">
+                <label for="Atlético">Atlético</label><br>
+            </div>
+            <div class="sócio">
+                <br>
+                <input type="checkbox" id="Sócio torcedor" name="Sócio torcedor" value="Sim">
+                <label for="Sócio torcedor"> Eu sou sócio torcedor</label><br><br>
+            </div>
+            <div class="SMS">
+                <br>
+                <input type="checkbox" id="Receber SMS" name="Receber SMS" value="Sim">
+                <label for="Receber SMS"> Eu aceito receber SMS sobre meu time de coração</label><br><br>
+            </div>
+            <div class="estadio">
+                <label for="fname">Quantas vezes você vai para estadio ?:</label><br>
+                <input type="radio" id="1 vez por mês" name="Quantas vezes você vai para estadio ?"
+                    value="1 vez por mês">
+                <label for="1 vez por mês">1 vez por mês</label><input type="radio" id="2 vez por mês"
+                    name="Quantas vezes você vai para estadio ?" value="2 vez por mês">
+                <label for="2 vez por mês">2 vez por mês</label><input type="radio" id="3 vez por mês"
+                    name="Quantas vezes você vai para estadio ?" value="3 vez por mês">
+                <label for="3 vez por mês">3 vez por mês</label><br>
+            </div>
+
+            <input type="submit" class="button" value="enviar"><br>
+         
+         <!-- Footer -->
+
+          
+            <img class=imagem src="https://i.pinimg.com/736x/67/9d/b6/679db6522cdff2907b97ed3aead26d87.jpg"
+                alt="super11" width="280" height="280"><div></div>
+    
+
+        </form>
+    </div>
+</body>
+
+</html>

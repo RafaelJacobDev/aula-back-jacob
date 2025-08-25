@@ -1,0 +1,77 @@
+.container{
+flex: 1;
+background-color: rgb(250, 248, 248);
+padding: 40px;
+max-width: 700px;
+margin: auto;
+border-left: burlywood;
+box-shadow: -10 0 20px rgba(0,0,0,0,5);
+border-radius: 0 20px 20px 0;
+text-align: center;
+border-style: solid;
+border-color: black;
+}
+.nome{
+    background-color: #606cee;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.idade{
+        width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.telefone{
+        width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.time{
+    background-color: #606cee;
+        width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.sócio{
+           width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.SMS{
+    background-color: #606cee;
+        width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.estadio{
+        width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 20%;
+    background-color: #594de5;
+    color: white;
+    padding: auto;
+    margin: auto;
+    border: nome;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 37px;
+    box-shadow: 0 12px 16px 0 rgba(102, 2, 2, 0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.imagem{
+    border-radius: 50%;
+}
+
