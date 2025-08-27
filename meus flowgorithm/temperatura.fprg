@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="temperatura"/>
+        <attribute name="authors" value="rafael.jtgrangeiro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-19 02:57:43 "/>
+        <attribute name="created" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA4LTE5OyIwMjo1MTowNSAiOzM5MDk="/>
+        <attribute name="edited" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA4LTE5OyIwMjo1Nzo0MyAiOzE7NDAyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Celsius, Fahrenheit" type="Real" array="False" size=""/>
+            <output expression="&quot;me informe quantos C&#176; esta&quot;" newline="True"/>
+            <input variable="Celsius"/>
+            <assign variable="Fahrenheit" expression="(Celsius*1.8)+32"/>
+            <output expression="&quot;esta &quot; &amp; Fahrenheit &amp; &quot; graus Fahrenheit&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

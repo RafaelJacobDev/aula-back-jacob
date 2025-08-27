@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="perimetro do triangulo"/>
+        <attribute name="authors" value="rafael.jtgrangeiro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-13 03:10:53 "/>
+        <attribute name="created" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA4LTEzOyIwMzowNjozNCAiOzM5MDY="/>
+        <attribute name="edited" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA4LTEzOyIwMzoxMDo1MyAiOzE7NDAxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lado1, lado2, lado3, perimetro" type="Real" array="False" size=""/>
+            <output expression="&quot;digite o lado 1&quot;" newline="True"/>
+            <input variable="lado1"/>
+            <output expression="&quot;digite o lado 2&quot;" newline="True"/>
+            <input variable="lado2"/>
+            <output expression="&quot;digite o lado 3&quot;" newline="True"/>
+            <input variable="lado3"/>
+            <assign variable="perimetro" expression="lado1+lado2+lado3"/>
+            <output expression="&quot;o per&#237;metro do triangulo &#233; &quot; &amp; perimetro" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

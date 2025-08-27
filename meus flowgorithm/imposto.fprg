@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="imposto"/>
+        <attribute name="authors" value="rafael.jtgrangeiro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-19 02:50:11 "/>
+        <attribute name="created" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA4LTE5OyIwMjozODo0OCAiOzM5MjE="/>
+        <attribute name="edited" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA4LTE5OyIwMjo1MDoxMSAiOzE7NDAxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="renda, imposto" type="Real" array="False" size=""/>
+            <output expression="&quot;informe o seu nome com sobrenome&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;informe a sua renda mensal&quot;" newline="True"/>
+            <input variable="renda"/>
+            <assign variable="imposto" expression="renda*0.0750"/>
+            <output expression="nome &amp; &quot; seu imposto &#233; de &quot; &amp; imposto" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
