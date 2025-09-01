@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lopp"/>
+        <attribute name="authors" value="rafael.jtgrangeiro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-01 05:07:55 "/>
+        <attribute name="created" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA5LTAxOyIwNDo1NjoyMiAiOzM5MDc="/>
+        <attribute name="edited" value="cmFmYWVsLmp0Z3JhbmdlaXJvO1NBTjA3MTc0NjNXMTEtMTsyMDI1LTA5LTAxOyIwNTowNzo1NSAiOzE7NDAxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="inicio, final, passo" type="Integer" array="False" size=""/>
+            <output expression="&quot;digite o inicio&quot;" newline="True"/>
+            <input variable="inicio"/>
+            <output expression="&quot;digite o valor final&quot;" newline="True"/>
+            <input variable="final"/>
+            <output expression="&quot;digite o numero de passos&quot;" newline="True"/>
+            <input variable="passo"/>
+            <while expression="inicio &lt;= final">
+                <output expression="inicio" newline="True"/>
+                <assign variable="inicio" expression="inicio+passo"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
