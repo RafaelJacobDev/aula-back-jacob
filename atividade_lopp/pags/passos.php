@@ -1,22 +1,40 @@
 <?php
 
-$valorinicial = filter_input(INPUT_GET, "valorinicial", FILTER_SANITIZE_NUMBER_INT);
+$valorinicial = filter_input(INPUT_GET, "valorinicial", FILTER_VALIDATE_INT);
 
-$valorfinal = filter_input(INPUT_GET, "valorfinal", FILTER_SANITIZE_NUMBER_INT);
+$valorfinal = filter_input(INPUT_GET, "valorfinal", FILTER_VALIDATE_INT);
 
-$passos = filter_input(INPUT_GET, "passos", FILTER_SANITIZE_NUMBER_INT);
+$passos = filter_input(INPUT_GET, "passos", FILTER_VALIDATE_INT);
 
-if ($valorinicial == false ||  $valorfinal == false || $passos == false) {
-    $resultadoContagem = "Valores inválidos";
+$resultadoContagem = "";
+
+if ($valorinicial == false ||  $valorfinal == false || $passos == false || $valorinicial < 0 || $valorfinal > 50 || $valorfinal < $valorinicial || $passos > $valorfinal) {
+    $mensagem = "Valores inválidos";
 } else {
-    while ($valorinicial <= $valorfinal) {
-        $resultadoContagem = $valorinicial . "<li> $passos </li>";
-        //$resultadoContagem .= "<li> $contador </li>";
+    $mensagem = "Contagem iniciando em $valorinicial e terminando em $valorfinal (incrementos de $passos)";
 
-        $resultadoContagem = $valorinicial + $passos;
-        //$contador += 2;
+    $resultadoContagem = "";
+    $contador = $valorinicial;
+
+    $primeiroNumero = true;
+
+    while ($contador <= $valorfinal) {
+        $proximoContador = $contador + $passos;
+        $ultimoNumero = ($proximoContador > $valorfinal);
+
+        if ($primeiroNumero) {
+            $resultadoContagem .= "<li>$contador - Número inicial</li>";
+            $primeiroNumero = false;
+        } elseif ($ultimoNumero) {
+            $resultadoContagem .= "<li>$contador - Número final</li>";
+        } else {
+            $resultadoContagem .= "<li>$contador</li>";
+        }
+
+        $contador = $contador + $passos;
     }
 }
+
 ?>
 
 
@@ -26,15 +44,22 @@ if ($valorinicial == false ||  $valorfinal == false || $passos == false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contagem de 0 a 20</title>
+    <title>Contagem</title>
     <link rel="stylesheet" href="./../css/estilo.css">
 </head>
 
 <body>
-    <h1> Contagem com While </h1>
-    <ul>
-        <p><?= $resultadoContagem; ?></p>
-    </ul>
+     <div class="main">
+        <h1>Contagem com While</h1>
+        <div class="coluna">
+            <p class="mensagem"><?= $mensagem; ?></p>
+            <ul class="mensagem">
+                <?= $resultadoContagem; ?>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">Voltar</a>
+    </div>
 </body>
 
 </html>

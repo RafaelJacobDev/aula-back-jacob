@@ -8,7 +8,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(135deg, #3c3b3f 0%, #605c3c 100%);
+  background: linear-gradient(135deg, #efeef1 0%, #605c3c 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,8 +17,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main  {
+  background: #fff;
+  max-width: 360px;
+  width: 100%;
+  padding: 45px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25),
+    0 6px 10px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
 
-main {
+
+.main {
   background: #fff;
   max-width: 360px;
   width: 100%;
@@ -38,7 +49,7 @@ h1 {
 }
 
 
-form {
+.coluna {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -52,6 +63,7 @@ label {
   font-weight: 500;
   margin-bottom: -10px;
 }
+
 
 
 input {
@@ -94,7 +106,12 @@ button:focus {
   transform: scale(1.02);
 }
 
-.resultado {
+
+
+.mensagem {
+  background-color: #f1f8e9;
+  color: #010a01;
+  border-color: #f31b1b;
   padding: 15px;
   margin-bottom: 25px;
   border-radius: 8px;
@@ -105,17 +122,6 @@ button:focus {
 }
 
 
-.resultado.sucesso {
-  background-color: #f1f8e9;
-  color: #43A047;
-  border-color: #4CAF50;
-}
-
-.resultado.erro {
-  background-color: #ffebee;
-  color: #c62828;
-  border-color: #d32f2f;
-}
 
 
 .back-link {
@@ -135,7 +141,4 @@ button:focus {
   transition: all 0.3s ease;
 }
 
-.back-link:hover {
-  background: #5a6268;
-  transform: scale(1.02);
-}
+
