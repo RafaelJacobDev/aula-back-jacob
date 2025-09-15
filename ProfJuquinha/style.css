@@ -57,9 +57,8 @@
 
 }
 
-
-.e-mail {
-
+.formAluno{
+   
     padding: 16px;
     margin-bottom: 10px;
     border-radius: 20px;
@@ -67,65 +66,10 @@
     border: none;
     background-color: #f0e6d5;
     text-align: center;
-}
-
-
-
-.nome {
-
-    padding: 16px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    width: 800px;
-    border: none;
-    background-color: #f0e6d5;
-    text-align: center;
+    
 
 }
 
-.nascimento {
-
-    padding: 16px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    width: 800px;
-    border: none;
-    background-color: #f0e6d5;
-    text-align: center;
-}
-
-.telefone {
-
-    padding: 16px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    width: 800px;
-    border: none;
-    background-color: #f0e6d5;
-    text-align: center;
-}
-
-.escolaridade {
-
-    padding: 16px;
-    width: 800px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: #f0e6d5;
-    text-align: center;
-}
-
-.endereco {
-
-    padding: 16px;
-    width: 800px;
-    margin-bottom: 15px;
-    border-radius: 20px;
-    border: none;
-    background-color: #f0e6d5;
-    text-align: center;
-}
 
 .button {
     padding: 16px;
