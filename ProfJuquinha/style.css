@@ -75,23 +75,13 @@
     padding: 16px;
     margin-bottom: 10px;
     border-radius: 20px;
-    width: 350px;
-    border: none;
-    background-color: #f0e6d5;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-.button-salvar {
-    padding: 16px;
-    margin-bottom: 10px;
-    border-radius: 20px;
     width: 240px;
     border: none;
-    background-color: #f0e6d5;
+    background-color: #efb36c;
     text-align: center;
     text-decoration: none;
     color: black;
     cursor: pointer;
+    box-shadow: 0 4px 6px 0 #5db7bd8e, 0 4px 6px 0 #5db7bd8e;
+    font-size: 1rem;
 }
