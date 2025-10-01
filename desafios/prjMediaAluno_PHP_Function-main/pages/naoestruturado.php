@@ -1,8 +1,28 @@
 <?php
+function validarEntradas($nome, $notas)
+{
+    if (!isset($nome) && count($notas) == 0 || (!preg_match('/^[A-Za-z\s]+$/', $nome)) && (!is_numeric($notas))) {
+        return false;
+    } else {
+        return true;
+    }
+
+    // ^ e $ → início e fim da string (pra não deixar sobrar nada fora do padrão).
+
+    //\p{L} → qualquer letra (inclui acentos, ç, etc).
+
+    //\s → espaço.
+
+    //+ → precisa ter pelo menos 1 caractere válido.
+
+    //u → para tratar corretamente caracteres UTF-8 (acentos).
+
+}
 
 function darBoasVindas()
 {
-    $hora = time();
+    date_default_timezone_set('America/Sao_Paulo');
+    $hora = date("H:i:s"); //?
     echo "Hello World Function, {$hora}";
 }
 
@@ -22,12 +42,31 @@ function verificarAprovacao($umaMedia)
     // }
 
 }
+function passouMedia($aprovacao)
+{
+    return $mensagemAprovacao = $aprovacao == true ? "Você passou de ano" : "Você reprovou de ano";
 
+    //if ($aprovacao=true) {
+    //   $mensagemAprovacao= "Você passou de ano";
+    //} else{
+    //    $mensagemAprovacao= "Você reprovou de ano";
+    //}
+    //return $mensagemAprovacao;
+}
 $nome = trim($_GET['nome']);
 $notas = $_GET['notas'];
-
-calcularMedia($notas);
-verificarAprovacao($media);
+if (validarEntradas($nome, $notas) == true) {
+} else {
+    header('location: ../index.html');
+}
+$mensagemAprovacao = "";
+$media = calcularMedia($notas);
+$aprovacao = verificarAprovacao($media);
+$passouMedia = passouMedia($aprovacao);
+$media = number_format($media, 2, ',', '.');
+$mensagem = "Olá, {$nome}! Sua média é: {$media}";
+$mensagem2 = $passouMedia;
+darBoasVindas();
 
 //$mensagemBoasVindas = "Olá, {$nome}! Sua média é: {$media}";
 //if ($media >= 7) {
@@ -52,8 +91,9 @@ verificarAprovacao($media);
 <body>
     <main class="container">
         <h1>Performance do Aluno</h1>
-        <p><?= $mensagemBoasVindas ?></p>
-        <p id="<?= $media >= 7 ? "aprovado" : "reprovado"; ?>"><?= $mensagemResultado ?></p>
+        <p><?= $mensagem ?></p>
+        <p id="<?= $aprovacao == true ? "aprovado" : "reprovado"; ?>"><?= $mensagem2 ?></p>
+
     </main>
 </body>
 
