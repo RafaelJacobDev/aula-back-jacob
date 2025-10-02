@@ -23,7 +23,7 @@ function darBoasVindas()
 {
     date_default_timezone_set('America/Sao_Paulo');
     $hora = date("H:i:s"); //?
-    echo "Hello World Function, {$hora}";
+    echo "Bem vindo, {$hora}";
 }
 
 function calcularMedia($arrayNotas)
@@ -66,7 +66,7 @@ $passouMedia = passouMedia($aprovacao);
 $media = number_format($media, 2, ',', '.');
 $mensagem = "Olá, {$nome}! Sua média é: {$media}";
 $mensagem2 = $passouMedia;
-darBoasVindas();
+
 
 //$mensagemBoasVindas = "Olá, {$nome}! Sua média é: {$media}";
 //if ($media >= 7) {
@@ -91,6 +91,7 @@ darBoasVindas();
 <body>
     <main class="container">
         <h1>Performance do Aluno</h1>
+        <p><?=darBoasVindas()?></p>
         <p><?= $mensagem ?></p>
         <p id="<?= $aprovacao == true ? "aprovado" : "reprovado"; ?>"><?= $mensagem2 ?></p>
 
