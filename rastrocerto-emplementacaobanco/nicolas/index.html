@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Voluntariado - Rastro Certo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <a href="#" class="logo"><img src="./img/logo.png" alt="LogoRastroCerto"></a>
+ 
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#radar">Radar de Pets</a></li>
+                <li><a href="#ongs">ONGs/Protetores</a></li>
+                <li><a href="#final-feliz">Final Feliz</a></li>
+                <li><a href="minha-area">Minha Área</a></li>
+                <li><a href="Ajude">Ajude</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="caixa">
+
+        <h1>Seja um Voluntário!</h1>
+
+        <!-- Voluntário Front/Back -->
+        <section>
+            <h2>Voluntário de Frontend/Backend</h2>
+            <form action="./pages/salvar.php" method="post">
+                <input type="hidden" name="tipo" value="dev">
+                <label for="nome_dev">Nome:</label>
+                <input id="nome_dev" type="text" name="nome" required autocomplete="name">
+
+                <label for="email_dev">Email:</label>
+                <input id="email_dev" type="email" name="email" required autocomplete="email">
+
+                <label for="area_interesse">Área de Interesse:</label>
+                <input id="area_interesse" type="text" name="area_interesse" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+
+        <!-- Lar Temporário -->
+        <section>
+            <h2>Voluntário de Lar Temporário</h2>
+            <form action="./pages/salvar.php" method="post">
+                <input type="hidden" name="tipo" value="lar_temporario">
+                <label for="nome_lar">Nome:</label>
+                <input id="nome_lar" type="text" name="nome" required>
+
+                <label for="email_lar">Email:</label>
+                <input id="email_lar" type="email" name="email" required>
+
+                <label for="disp">Disponibilidade:</label>
+                <input id="disp" type="text" name="disponibilidade" required>
+
+                <label for="endereco">Endereço:</label>
+                <input id="endereco" type="text" name="endereco" required>
+
+                <label for="animal">Tipo de Animal:</label>
+                <input id="animal" type="text" name="animal" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+
+        <!-- Resgate -->
+        <section>
+            <h2>Voluntário de Resgate/Outros</h2>
+            <form action="./pages/salvar.php" method="post">
+                <input type="hidden" name="tipo" value="resgate">
+                <label for="nome_resgate">Nome:</label>
+                <input id="nome_resgate" type="text" name="nome" required>
+
+                <label for="email_resgate">Email:</label>
+                <input id="email_resgate" type="email" name="email" required>
+
+                <label for="atuacao">Área de Atuação:</label>
+                <input id="atuacao" type="text" name="area_atuacao" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <footer class="footer">
+            <p>© 2025 RastroCerto. Todos os direitos reservados. <a href="https://github.com/nicdopp" target="_blank" class="footer-link">GitHub do Nicolas</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
